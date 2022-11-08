@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Actividad4 {
     public static void letraMasUsada(File archivo) {
         ArrayList<Letras> coleccion = new ArrayList<>();
-//TODO
+
         try (FileReader fr = new FileReader(archivo)) {
             int cont = 0;
             int primeraLetra;
@@ -44,8 +44,10 @@ public class Actividad4 {
             
             for (int i = 0; i < coleccion.size(); i++) {
                 if (coleccion.get(i).getCantidad() > acu) {
+                    String obtenerletra;
                     acu = coleccion.get(i).getCantidad();
-                    letra = String.valueOf(coleccion.get(i).getLetra());
+                    obtenerletra = String.valueOf(coleccion.get(i).getLetra());
+                    letra = obtenerletra;
                 }
             }
             System.out.println(letra + " - " + acu);
